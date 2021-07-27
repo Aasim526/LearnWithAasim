@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="LWA-logo.png" type="image/x-icon">
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/Serpentine-Medium.otf">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Welcome to Learn With Aasim</title>
+</head>
+
+<body>
+
+    <!-- ========== Navigation ========== -->
+    <nav class="fluid flex">
+        <a href="#" class="logo">
+            <img src="img/Learn With Aasim.svg" alt="">
+        </a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="menu"></div>
+    </nav>
+    <!-- ========== Navigation Ends ========== -->
+
+
+    <ul id="navUL">
+        <li><a href="#">Home</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- ========== Header Section ========== -->
+    <header class="fluid flex">
+        <div class="banner white">
+            <h1>A Skill Oriented Learning Environment</h1>
+            <div class="bannerCTA">
+                <a href="#contact" class="contactCTA">Contact</a>
+                <a href="#pricing" class="pricingCTA">Pricing</a>
+            </div>
+        </div>
+        <div class="banner-img">
+            <img src="img/heroSec.svg" alt="">
+        </div>
+    </header>
+    <!-- ========== Header Section Ends ========== -->
+
+
+
+    <!-- ========== Pricing Section ========== -->
+    <section id="pricing" class="grid">
+        <div class="container">
+            <div class="priceNav flex">
+                <button onclick="basicsToggle();" id="basicBTN" class="activeBTN">Basics</button>
+                <button onclick="webDevToggle()" id="webDevBTN">Web Development</button>
+                <button onclick="hardwareToggle()" id="hardwareBTN">Build Your PC</button>
+            </div>
+
+            <!-- Basics  -->
+            <div id="basics" class="priceCardSection flex">
+
+                <div class="priceCard text-center">
+                    <h4>Steady Plan</h4>
+                    <h6>Perfect for absolute beginners</h6>
+                    <div class="saving flex">
+                        <p>600/-</p>
+                        <button class="saveTag">SAVE 17%</button>
+                    </div>
+                    <p class="rate"><span>&#8377</span> 500/m</p>
+                    <div class="duration">
+                        <p>3 Months</p>
+                    </div>
+                    <p class="prepaid">* PREPAID</p>
+                    <hr>
+
+                    <ul class="text-left">
+                        <li>1 Hour / Day</li>
+                        <li>2 Days / Week</li>
+                        <li>Certificate of Complition</li>
+                        <li>Basic of Computer</li>
+                        <li>Basic of Internet</li>
+                        <li>MS Word</li>
+                        <li>Introduction to MS Excel</li>
+                        <li>Basic of Canva</li>
+                    </ul>
+
+                    <button class="bookNow">BOOK NOW</button>
+                </div>
+
+
+                <div class="priceCard text-center">
+                    <h4>Premium Plan</h4>
+                    <h6>Perfect for fast learners</h6>
+                    <div class="saving flex">
+                        <p>1,800/-</p>
+                        <button class="saveTag">SAVE 33%</button>
+                    </div>
+                    <p class="rate"><span>&#8377</span> 1,200/-</p>
+                    <div class="duration">
+                        <p>1 Month</p>
+                    </div>
+                    <p class="prepaid">* PREPAID</p>
+                    <hr>
+
+                    <ul class="text-left">
+                        <li>2 Hours / Day</li>
+                        <li>2 Days / Week</li>
+                        <li>Certificate of Complition</li>
+                        <li>Basic of Computer</li>
+                        <li>Basic of Internet</li>
+                        <li>MS Word</li>
+                        <li>Introduction to MS Excel</li>
+                        <li>Basic of Canva</li>
+                    </ul>
+
+                    <button class="bookNow">BOOK NOW</button>
+                </div>
+
+                <div class="priceCard text-center">
+                    <h4>Steady Plan</h4>
+                    <h6>Perfect for absolute beginners</h6>
+                    <div class="saving flex">
+                        <p>600/-</p>
+                        <button class="saveTag">SAVE 50%</button>
+                    </div>
+                    <p class="rate"><span>&#8377</span> 300/m</p>
+                    <div class="duration">
+                        <p>3 Months</p>
+                    </div>
+                    <p class="prepaid">* PREPAID</p>
+                    <hr>
+
+                    <ul class="text-left">
+                        <li>1 Hour / Day</li>
+                        <li> Day / Week</li>
+                        <li>Certificate of Complition</li>
+                        <li>Basic of Computer</li>
+                        <li>Basic of Internet</li>
+                        <li>MS Word</li>
+                        <li>Introduction to MS Excel</li>
+                    </ul>
+
+                    <button class="bookNow">BOOK NOW</button>
+                </div>
+
+            </div>
+            <!-- Basics Ends -->
+
+            <!-- Web Dev   -->
+            <div id="webDev" class="priceCardSection flex d-none">
+
+                <div class="priceCard text-center">
+                    <h4>Steady Plan</h4>
+                    <h6>Deep Learning at Your Own Pace</h6>
+                    <div class="saving flex">
+                        <p>1,000/-</p>
+                        <button class="saveTag">SAVE 50%</button>
+                    </div>
+                    <p class="rate"><span>&#8377</span> 500/m</p>
+                    <div class="duration">
+                        <p>12 Months</p>
+                    </div>
+                    <p class="prepaid">* PREPAID</p>
+                    <hr>
+
+                    <ul class="text-left">
+                        <li>2 Hours / Day</li>
+                        <li>2 Days / Week</li>
+                        <li>Certificate of Complition</li>
+                    </ul>
+
+                    <button class="bookNow">BOOK NOW</button>
+                </div>
+
+
+                <div class="priceCard text-center">
+                    <h4>Premium Plan</h4>
+                    <h6>Perfect for fast learners **</h6>
+                    <div class="saving flex">
+                        <p>12,000/-</p>
+                        <button class="saveTag">SAVE 33%</button>
+                    </div>
+                    <p class="rate"><span>&#8377</span> 7,999/-</p>
+                    <div class="duration">
+                        <p>1 Month</p>
+                    </div>
+                    <p class="prepaid">* PREPAID</p>
+                    <hr>
+
+                    <ul class="text-left">
+                        <li>3 Hours / Day</li>
+                        <li>2 Days / Week</li>
+                        <li>Certificate of Complition</li>
+                    </ul>
+
+                    <button class="bookNow">BOOK NOW</button>
+                </div>
+
+                <div class="priceCard text-center">
+                    <h4>Go Online</h4>
+                    <h6>Build Your website with us</h6>
+                    <div class="saving flex">
+                        <p>5,000/-</p>
+                        <button class="saveTag">SAVE 50%</button>
+                    </div>
+                    <p class="rate"><span>&#8377</span> 2,500/-</p>
+                    <div class="duration">
+                        <p>3 Months</p>
+                    </div>
+                    <p class="prepaid">* PREPAID</p>
+                    <hr>
+
+                    <ul class="text-left">
+                        <li>1 Hour / Day</li>
+                        <li> Day / Week</li>
+                        <li>Certificate of Complition</li>
+                    </ul>
+
+                    <button class="bookNow">BOOK NOW</button>
+                </div>
+
+            </div>
+            <!-- Web Dev Ends -->
+
+            <!-- Hardware  -->
+            <div id="hardware" class="priceCardSection flex d-none">
+
+                <div class="priceCard text-center">
+                    <h4>Build your dream pc</h4>
+                    <h6>We Help People Choosing & Assembling The Best Components For Their Dream Gaming Pc</h6>
+                    <p class="rate">7% of Your Budget</p>
+                    <p>Min - 1,499/-</p>
+                    <!-- <p class="prepaid">* PREPAID</p> -->
+                    <hr>
+
+                    <ul class="text-left">
+                        <li>1 Hour / Day</li>
+                        <li>2 Days / Week</li>
+                        <li>Certificate of Complition</li>
+                        <li>Basic of Computer</li>
+                        <li>Basic of Internet</li>
+                        <li>MS Word</li>
+                        <li>Introduction to MS Excel</li>
+                        <li>Basic of Canva</li>
+                    </ul>
+
+                    <button class="bookNow">BOOK NOW</button>
+                </div>
+
+
+                <div class="priceCard text-center">
+                    <h4>Premium Plan</h4>
+                    <h6>Perfect for fast learners</h6>
+                    <div class="saving flex">
+                        <p>1,800/-</p>
+                        <button class="saveTag">SAVE 33%</button>
+                    </div>
+                    <p class="rate"><span>&#8377</span> 1,200/-</p>
+                    <div class="duration">
+                        <p>1 Month</p>
+                    </div>
+                    <p class="prepaid">* PREPAID</p>
+                    <hr>
+
+                    <ul class="text-left">
+                        <li>2 Hours / Day</li>
+                        <li>2 Days / Week</li>
+                        <li>Certificate of Complition</li>
+                        <li>Basic of Computer</li>
+                        <li>Basic of Internet</li>
+                        <li>MS Word</li>
+                        <li>Introduction to MS Excel</li>
+                        <li>Basic of Canva</li>
+                    </ul>
+
+                    <button class="bookNow">BOOK NOW</button>
+                </div>
+
+                <div class="priceCard text-center">
+                    <h4>Steady Plan</h4>
+                    <h6>Perfect for absolute beginners</h6>
+                    <div class="saving flex">
+                        <p>600/-</p>
+                        <button class="saveTag">SAVE 50%</button>
+                    </div>
+                    <p class="rate"><span>&#8377</span> 300/m</p>
+                    <div class="duration">
+                        <p>3 Months</p>
+                    </div>
+                    <p class="prepaid">* PREPAID</p>
+                    <hr>
+
+                    <ul class="text-left">
+                        <li>1 Hour / Day</li>
+                        <li> Day / Week</li>
+                        <li>Certificate of Complition</li>
+                        <li>Basic of Computer</li>
+                        <li>Basic of Internet</li>
+                        <li>MS Word</li>
+                        <li>Introduction to MS Excel</li>
+                    </ul>
+
+                    <button class="bookNow">BOOK NOW</button>
+                </div>
+
+            </div>
+            <!-- Hardware Ends -->
+        </div>
+    </section>
+    <!-- ========== Pricing Section Ends ========== -->
+
+
+    <!-- Course details section  -->
+    <section id="courses">
+        <div class="container">
+
+            <h2 class="uppercase black text-center">Course details</h2>
+            <hr>
+
+            <div class="courseDetailsBox flex">
+                <div class="cdbLeft grid">
+                    <img src="img/compobasics.jpg" alt="">
+                </div>
+                <div class="cdbRight">
+                    <h3 class="primaryColor uppercase ">Computer basics</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam doloribus tenetur perferendis
+                        autem nesciunt dignissimos tempore porro amet accusantium doloremque, cum debitis, ut
+                        reprehenderit quas pariatur quis rem eveniet unde reiciendis explicabo velit iusto. Porro
+                        placeat dolor in dolorum facilis cumque. Omnis veniam quisquam similique quo tenetur.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="courseDetailsBox webdevDetails flex">
+                <div class="cdbRight">
+                    <h3 class="primaryColor uppercase ">become a frontend developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam doloribus tenetur perferendis
+                        autem nesciunt dignissimos tempore porro amet accusantium doloremque, cum debitis, ut
+                        reprehenderit quas pariatur quis rem eveniet unde reiciendis explicabo velit iusto. Porro
+                        placeat dolor in dolorum facilis cumque. Omnis veniam quisquam similique quo tenetur.
+                    </p>
+                </div>
+                <div class="cdbLeft grid">
+                    <img src="img/frontend.jpg" alt="">
+                </div>
+                <img class="techStack" src="img/techStack.png" alt="">
+            </div>
+
+
+            <div class="heading-text text-center">
+                <h2 class="uppercase black text-center">What You Will Get In This Course</h2>
+            <hr>
+            <p>This Is A Job Ready Life Changing Practical Course</p>
+            </div>
+
+            <div class="courseDetailsBox flex">
+                <div class="cdbLeft grid">
+                    <img src="img/learning.jpg" alt="">
+                </div>
+                <div class="cdbRight">
+                    <h3 class="primaryColor uppercase ">Technologies You'll Learn</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam doloribus tenetur perferendis
+                        autem nesciunt dignissimos tempore porro amet accusantium doloremque, cum debitis, ut
+                        reprehenderit quas pariatur quis rem eveniet unde reiciendis explicabo velit iusto. Porro
+                        placeat dolor in dolorum facilis cumque. Omnis veniam quisquam similique quo tenetur.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="courseDetailsBox webdevDetails flex">
+                <div class="cdbRight">
+                    <h3 class="primaryColor uppercase ">Interview Cracking Formula</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam doloribus tenetur perferendis
+                        autem nesciunt dignissimos tempore porro amet accusantium doloremque, cum debitis, ut
+                        reprehenderit quas pariatur quis rem eveniet unde reiciendis explicabo velit iusto. Porro
+                        placeat dolor in dolorum facilis cumque. Omnis veniam quisquam similique quo tenetur.
+                    </p>
+                </div>
+                <div class="cdbLeft grid">
+                    <img src="img/interview.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="courseDetailsBox flex">
+                <div class="cdbLeft grid">
+                    <img src="img/certificate.jpg" alt="">
+                </div>
+                <div class="cdbRight">
+                    <h3 class="primaryColor uppercase ">Certificate of Complition</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam doloribus tenetur perferendis
+                        autem nesciunt dignissimos tempore porro amet accusantium doloremque, cum debitis, ut
+                        reprehenderit quas pariatur quis rem eveniet unde reiciendis explicabo velit iusto. Porro
+                        placeat dolor in dolorum facilis cumque. Omnis veniam quisquam similique quo tenetur.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Course details section ends -->
+
+
+    <!-- About Me  -->
+    <section id="about">
+        <div class="container">
+            <div class="heading-text text-center">
+                <h2 class="uppercase black text-center">About md aasim</h2>
+                <hr>
+                <p>Aasim is the creator of <span>Learn with Aasim</span></p>
+            </div>
+            <div class="aboutMe flex">
+                <div class="aboutTxt">
+                    <p>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500S, When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen Book.</p>
+                    <p>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500S.</p>
+                    <p>Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500S.</p>
+                </div>
+                <div class="aboutImg">
+                    <div class="aboutImgContainer">
+                        <img src="img/myimg.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Me Ends -->
+
+
+    <!-- contact section  -->
+    <footer id="contact" class="flex">
+        <!-- Contact section  -->
+        <div class="footer-left">
+            <a href="#" class="footerLogo">
+                <img src="img/LearnWithAasimFooter.png" alt="">
+            </a>
+            <p class="white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, laudantium in at sit aliquid temporibus deserunt quasi ut, nam excepturi nulla veritatis quas repellendus accusamus quam est libero ipsa voluptates.</p>
+            <div class="socials">
+                <ul>
+                    <li><a href="#">
+                        <img src="img/linkedin.png" alt="">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/instagram.png" alt="">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/fb.png" alt="">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="img/yt.png" alt="">
+                    </a></li>
+                </ul>
+            </div>
+            <address class="white">
+                <p>Topsia Road, Kolkata</p>
+                <p>Pincode - 700 039</p>
+                <p>West Bengal, India</p>
+            </address>
+
+            <div class="timing white">
+                <h6>Contact Timing : -</h6>
+                <div class="time">
+                    <p>Saturday : 4:00 PM - 8:00 PM</p>
+                    <p>Sunday : 10:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            <div class="copyTxt white">
+                <p>&copy; 2021 learnwithaasim.com</p>
+                <p>Design & Developed By Md Aasim.</p>
+            </div>
+        </div>
+
+        <!-- Form section  -->
+        <div class="footer-right">
+            <div class="contact-form">
+                <div class="form-text">
+                    <h4 class="black uppercase text-center">Contact form</h4>
+                    <hr>
+                </div>
+                <form action="https://formsubmit.co/aasim@onenesstechs.in" method="POST" >
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" placeholder="Md Aasim" required>
+
+                    <label for="email">Email ID</label>
+                    <input type="email" name="email" placeholder="aasim@onenesstechs.in" required>
+
+                    <label for="number">Phone No.</label>
+                    <input type="number" name="number" placeholder="+91  |" maxlength="10" required>
+
+                    <label for="subject">Subject</label>
+                    <select name="subject" id="subject" required>
+                        <option selected disabled>Choose an option</option>
+                        <option value="Basic">Basic</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="PC Building">PC Building</option>
+                    </select>
+
+                    <button class="white uppercase submitBTN" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- contact section ends -->
+
+
+
+
+
+
+
+
+
+
+    <!-- custom script  -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

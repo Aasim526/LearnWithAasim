@@ -1,0 +1,962 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Variables
+$primary-color: #9264ff;
+$secondary-color: #492aa7;
+$deep-color: #2e1760;
+$pink-color: #ff5bce;
+$primary-font: "poppins", sans-serif;
+$secondary-font: "Serpentine", sans-serif;
+
+@mixin button {
+  padding: 8px 20px;
+  font-family: $primary-font;
+  font-size: 16px;
+  border: 0;
+  cursor: pointer;
+}
+@mixin h2 {
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+@mixin hr($width) {
+  width: $width;
+  border: 2px solid $primary-color;
+  margin: 0 auto;
+  @media only screen and (max-width: 490px) {
+    border-width: 1px;
+  }
+}
+
+// font weights available for Serpentine = 100, 400, 600
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $primary-font;
+}
+
+/*common classes*/
+.primaryColor {
+  color: $primary-color;
+}
+.deepColor {
+  color: $deep-color;
+}
+.pinkColor {
+  color: $pink-color;
+}
+.black {
+  color: #393939;
+}
+.white {
+  color: #fff;
+}
+.lightGray {
+  color: #e8e8e8;
+}
+.darkGray {
+  color: #6e6e6e;
+}
+.fluid {
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.d-none {
+  display: none !important;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 75%;
+  max-width: 1270px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  //   align-items: center;
+}
+.grid {
+  display: grid;
+  align-items: center;
+}
+button {
+  @include button();
+}
+
+/*========== Navigation ==========*/
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  padding: 15px 50px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  .logo {
+    width: 20%;
+    img {
+      width: 100%;
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: 0.4s;
+    li {
+      a {
+        padding-left: 25px;
+        color: $deep-color;
+        font-size: 18px;
+      }
+    }
+  }
+
+  #menu {
+    display: none;
+  }
+}
+#navUL{
+  display: none !important;
+}
+
+/*========== Header ==========*/
+header {
+  min-height: 110vh;
+  padding: 50px;
+  background: rgb(46, 23, 96);
+  background: linear-gradient(
+    90deg,
+    rgba(46, 23, 96, 1) 0%,
+    rgba(73, 42, 167, 1) 70%
+  );
+  align-items: center;
+  .banner {
+    width: 50%;
+    h1 {
+      font-size: 70px;
+      font-family: $secondary-font;
+      &::selection {
+        background-color: $primary-color;
+      }
+    }
+  }
+  .bannerCTA {
+    width: 100%;
+    margin-top: 30px;
+    .contactCTA {
+      @include button;
+      background-color: $primary-color;
+      color: #fff;
+      margin-right: 25px;
+    }
+    .pricingCTA {
+      @include button;
+      background-color: $pink-color;
+      color: #fff;
+    }
+  }
+  .banner-img {
+    width: 45%;
+    img {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*========== Pricing ========== */
+#pricing {
+  min-height: 100vh;
+  padding: 80px 0;
+  .priceNav {
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 6px;
+    box-shadow: 0 5px 15px rgba($color: #000, $alpha: 0.18);
+    margin-bottom: 80px;
+    button {
+      border-radius: 25px;
+      width: 33%;
+      background: none;
+      color: $deep-color;
+    }
+    .activeBTN {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+  .priceCardSection {
+    width: 100%;
+    .priceCard {
+      width: 30%;
+      background-color: #fff;
+      box-shadow: 0 0 16px rgba($color: #000000, $alpha: 0.16);
+      padding: 25px 40px;
+    }
+  }
+}
+.priceCard {
+  h4 {
+    color: $deep-color;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  h6 {
+    font-weight: 300;
+    color: $deep-color;
+    font-size: 12px;
+    padding: 8px 0;
+  }
+  .saving {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    p {
+      text-decoration: line-through;
+      color: #6e6e6e;
+      margin-right: 10px;
+    }
+    button {
+      border-radius: 30px;
+      font-size: 12px;
+      background-color: $primary-color;
+      color: #fff;
+      cursor: unset;
+    }
+  }
+  .rate {
+    font-size: 30px;
+    color: $deep-color;
+    font-weight: 500;
+    padding: 10px 0;
+    span {
+      font-family: $secondary-font;
+      font-size: 21px;
+    }
+  }
+  .duration {
+    width: 80%;
+    margin: 5px auto;
+    border: 1px solid $secondary-color;
+    padding: 5px;
+    p {
+      font-size: 14px;
+      color: $primary-color;
+      font-weight: 500;
+    }
+  }
+  .prepaid {
+    color: #6e6e6e;
+    font-size: 10px;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  ul {
+    padding: 15px 0;
+    li {
+      font-size: 12px;
+      font-weight: 500;
+      color: $deep-color;
+      padding: 4px 0;
+    }
+  }
+  .bookNow {
+    width: 100%;
+    background-color: $primary-color;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+
+#hardware {
+  .rate {
+    font-size: 20px;
+  }
+}
+
+/* ========== Courses ========== */
+#courses {
+  min-height: 100vh;
+  padding: 80px 0;
+
+  h2 {
+    @include h2();
+  }
+  hr {
+    @include hr(312px);
+  }
+  .courseDetailsBox {
+    margin-top: 100px;
+    .cdbLeft {
+      width: 45%;
+      padding: 25px 40px;
+      img {
+        width: 100%;
+        transform: scale(1.4);
+      }
+    }
+    .cdbRight {
+      width: 50%;
+    }
+    h3 {
+      font-size: 30px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 25px;
+      color: #393939;
+      letter-spacing: 0.5px;
+    }
+    .techStack {
+      width: 100%;
+      margin: 30px 0;
+    }
+  }
+  .heading-text {
+    margin-top: 80px;
+    hr {
+      @include hr(650px);
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* ========== About ========== */
+#about {
+  min-height: 75vh;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .heading-text {
+    width: 100%;
+    padding-bottom: 100px;
+    h2 {
+      @include h2();
+    }
+    hr {
+      @include hr(320px);
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: #393939;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+  .aboutTxt {
+    width: 55%;
+    p {
+      font-size: 14px;
+      line-height: 25px;
+      color: #393939;
+      letter-spacing: 0.5px;
+      padding-bottom: 6px;
+    }
+  }
+  .aboutImg {
+    width: 42%;
+    .aboutImgContainer {
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 100%;
+      background-color: #dcdcdc;
+      overflow: hidden;
+      img {
+        width: 100%;
+        border-radius: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+/* ========== Contact Details ========== */
+.footer-left {
+  .footerLogo {
+    width: 260px;
+    img {
+      width: 100%;
+    }
+  }
+  .socials ul {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    li a {
+      padding-right: 20px;
+      img {
+        width: 32px;
+      }
+    }
+  }
+  address {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    p {
+      font-weight: 300;
+      letter-spacing: 1.5px;
+    }
+  }
+  .timing {
+    h6 {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .time {
+      padding: 10px 0;
+      padding-left: 75px;
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+  .copyTxt {
+    margin-top: 30px;
+    p {
+      font-weight: 200;
+      letter-spacing: 1.5px;
+    }
+  }
+}
+
+/* ========== Contact Form ========== */
+#contact {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px;
+  align-content: center;
+  background: rgb(73, 42, 167);
+  background: linear-gradient(
+    90deg,
+    rgba(73, 42, 167, 1) 30%,
+    rgba(46, 23, 96, 1) 100%
+  );
+  .footer-left,
+  .footer-right {
+    width: 48%;
+  }
+}
+.footer-right {
+  padding: 0 25px;
+  .contact-form {
+    margin: 0 auto;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 30px;
+    padding: 30px 60px;
+    input,
+    label,
+    select {
+      width: 100%;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #393939;
+      font-size: 16px;
+    }
+    input,
+    select {
+      margin-bottom: 18px;
+      padding: 10px 20px;
+      background-color: #e8e8e8;
+      border: 0;
+      color: #6e6e6e;
+      font-size: 16px;
+      font-family: $primary-font;
+      &::placeholder {
+        color: #6e6e6e;
+        font-size: 14px;
+        font-family: $primary-font;
+        font-weight: 400;
+      }
+    }
+    option {
+      background-color: #e8e8e8;
+      padding: 10px 20px;
+    }
+    .submitBTN {
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 25px;
+      background-color: $primary-color;
+      border-radius: 5px;
+    }
+  }
+  .form-text {
+    margin-bottom: 30px;
+    h4 {
+      @include h2();
+      font-size: 28px;
+      font-weight: 400;
+    }
+    hr {
+      @include hr(240px);
+    }
+  }
+}
+
+/*========== 
+  Media Queries 
+========== */
+
+/* Min Width 1700px  ||||   Large Screen */
+@media only screen and (min-width: 1700px) {
+  // Form section
+  .footer-right {
+    .contact-form {
+      label {
+        font-size: 20px;
+      }
+      input,
+      select {
+        padding: 15px 20px;
+        font-size: 20px;
+        &::placeholder {
+          font-size: 18px;
+        }
+      }
+      .submitBTN {
+        padding: 15px 20px;
+        font-size: 18px;
+      }
+    }
+    .form-text h4 {
+      font-size: 32px;
+    }
+  }
+
+  // contact section
+  .footer-left {
+    p {
+      font-size: 18px;
+    }
+    address p {
+      font-size: 20px;
+    }
+    .timing {
+      h6 {
+        font-size: 20px;
+      }
+      .time p {
+        font-size: 18px;
+      }
+    }
+    .copyTxt p {
+      font-size: 18px;
+    }
+  }
+}
+/* Min Width 2100px  ||||   Large Screen */
+@media only screen and (min-width: 2100px) {
+  // Form section
+  .footer-right {
+    .contact-form {
+      label {
+        font-size: 26px;
+      }
+      input,
+      select {
+        padding: 25px 30px;
+        font-size: 26px;
+        &::placeholder {
+          font-size: 22px;
+        }
+      }
+      .submitBTN {
+        padding: 25px 30px;
+        font-size: 22px;
+      }
+    }
+    .form-text h4 {
+      font-size: 40px;
+    }
+  }
+
+  // contact section
+  .footer-left {
+    p {
+      font-size: 22px;
+    }
+    address p {
+      font-size: 24px;
+    }
+    .timing {
+      h6 {
+        font-size: 24px;
+      }
+      .time p {
+        font-size: 22px;
+      }
+    }
+    .copyTxt p {
+      font-size: 22px;
+    }
+  }
+}
+
+/* Max Width 1199px */
+@media only screen and (max-width: 1199px) {
+  header {
+    .banner h1 {
+      font-size: 59px;
+    }
+  }
+  button {
+    font-size: 15px;
+  }
+  .priceCard .saving {
+    flex-direction: column;
+    .saveTag {
+      width: 70%;
+      margin: 0 auto;
+    }
+    p {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+  #pricing .priceCardSection .priceCard {
+    width: 32%;
+  }
+  .footer-right {
+    padding: 0;
+  }
+}
+
+/* Max Width 991px */
+@media only screen and (max-width: 991px) {
+  header .banner h1 {
+    font-size: 50px;
+  }
+  .container {
+    width: 80%;
+  }
+  #pricing .priceNav {
+    width: 80%;
+  }
+  #pricing .priceCardSection .priceCard {
+    padding: 25px !important;
+  }
+}
+
+@media only screen and (max-width: 858px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 50px;
+  }
+  #pricing .priceNav {
+    width: 90%;
+  }
+  .footer-right .contact-form {
+    padding: 20px 35px;
+  }
+}
+
+/* Max Width 767px */
+@media only screen and (max-width: 767px) {
+  #navUL {
+    display: block !important;
+    width: 280px;
+    height: 100vh;
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(
+      90deg,
+      rgba(46, 23, 96, 1) 0%,
+      rgba(73, 42, 167, 1) 70%
+    );
+    z-index: 100;
+    transition: 0.4s;
+    border-right: 1px solid #fff;
+    li{
+      a {
+        display: inline-block;
+        padding: 20px 30px;
+        color: #fff;
+      }
+    }
+  }
+  #navUL.navUL {
+    left: 0;
+  }
+  nav {
+    .logo {
+      width: 50%;
+    }
+    ul {
+      display: none;
+      transition: 0.4s;
+    }
+    #menu {
+      width: 35px;
+      height: 35px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        width: 80%;
+        height: 2px;
+        background: rgb(46, 23, 96);
+        background: linear-gradient(
+          90deg,
+          rgba(46, 23, 96, 1) 0%,
+          rgba(73, 42, 167, 1) 70%
+        );
+        position: absolute;
+        transform: translateY(-6px);
+        transition: 0.4s;
+      }
+
+      &::after {
+        content: "";
+        width: 80%;
+        height: 2px;
+        background: rgb(46, 23, 96);
+        background: linear-gradient(
+          90deg,
+          rgba(46, 23, 96, 1) 0%,
+          rgba(73, 42, 167, 1) 70%
+        );
+        position: absolute;
+        transform: translateY(6px);
+        transition: 0.4s;
+      }
+    }
+    #menu.toggle::before {
+      transform: translateY(0px) rotate(45deg);
+    }
+    #menu.toggle::after {
+      transform: translateY(0px) rotate(-45deg);
+    }
+  }
+  header {
+    padding-top: 100px;
+    .banner,
+    .banner-img {
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+  #pricing .priceNav {
+    width: 100%;
+  }
+  #pricing .priceCardSection {
+    justify-content: center !important;
+    .priceCard {
+      width: 70%;
+      margin-bottom: 30px;
+      padding: 25px 50px !important;
+      .duration {
+        width: 50%;
+      }
+      .saving .saveTag {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  #courses {
+    padding: 30px 0;
+    h2 {
+      font-size: 24px;
+    }
+    hr {
+      width: 240px;
+    }
+    .heading-text {
+      hr {
+        width: 500px;
+      }
+    }
+    .courseDetailsBox {
+      margin-top: 0;
+      .cdbLeft {
+        width: 100%;
+        img {
+          transform: scale(1);
+        }
+      }
+      .cdbRight {
+        width: 100%;
+      }
+    }
+    .webdevDetails {
+      flex-direction: column-reverse;
+    }
+  }
+
+  #about {
+    .heading-text {
+      padding-bottom: 50px;
+      h2 {
+        font-size: 24px;
+      }
+      hr {
+        width: 250px;
+      }
+    }
+    .aboutTxt {
+      width: 100%;
+    }
+    .aboutImg {
+      width: 100%;
+      .aboutImgContainer {
+        width: 60%;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  #contact {
+    flex-direction: column-reverse;
+    .footer-right {
+      width: 80%;
+      margin: 0 auto 50px;
+      .contact-form {
+        padding: 30px 60px;
+      }
+    }
+    .footer-left {
+      width: 100%;
+    }
+  }
+}
+
+/* Max Width 659px */
+@media only screen and (max-width: 659px) {
+  #pricing .priceNav {
+    border-radius: 0;
+    button {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+}
+
+/* Max Width 599px */
+@media only screen and (max-width: 599px) {
+  #pricing .priceCardSection .priceCard {
+    width: 100%;
+  }
+  #courses {
+    h2 {
+      font-size: 18px;
+    }
+    hr {
+      width: 170px;
+    }
+    .heading-text hr {
+      width: 350px;
+    }
+    .courseDetailsBox h3 {
+      font-size: 18px;
+    }
+  }
+  #about {
+    .heading-text {
+      h2 {
+        font-size: 18px;
+      }
+      hr {
+        width: 170px;
+      }
+    }
+  }
+  #contact .footer-right {
+    width: 100%;
+    .contact-form {
+      padding: 30px 40px;
+    }
+  }
+}
+
+/* Max Width 490px */
+@media only screen and (max-width: 490px) {
+  nav {
+    padding: 15px 25px;
+  }
+  header {
+    padding: 50px 25px;
+    .banner h1 {
+      font-size: 30px;
+    }
+  }
+  #pricing .priceCardSection .priceCard {
+    padding: 25px !important;
+  }
+  #courses .heading-text p {
+    font-size: 14px;
+  }
+  #about .heading-text p {
+    font-size: 14px;
+  }
+  #courses .heading-text hr {
+    width: 250px;
+  }
+  #contact {
+    padding: 50px 25px;
+  }
+  .footer-right .form-text {
+    h4 {
+      font-size: 18px;
+    }
+    hr {
+      width: 180px;
+    }
+  }
+}
