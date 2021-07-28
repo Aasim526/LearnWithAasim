@@ -29,9 +29,18 @@ hardwareActiveBTN.classList.remove('activeBTN')}
 
 
 // Menu bar toggle 
-const menu = document.getElementById ('menu');
-const navUL = document.getElementById ('navUL');
-menu.onclick = function(){
+// const menu = document.getElementById ('menu');
+// const navUL = document.getElementById ('navUL');
+// menu.onclick = function(){
+//     menu.classList.toggle('toggle');
+//     navUL.classList.toggle('navUL');
+// }
+
+// Menu bar toggle 
+function menuBarToggle(){
+    const menu = document.getElementById ('menu');
+    const navUL = document.getElementById ('navUL');
+
     menu.classList.toggle('toggle');
     navUL.classList.toggle('navUL');
 }
