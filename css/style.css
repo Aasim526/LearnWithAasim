@@ -20,7 +20,7 @@ body {
 
 /*common classes*/
 .primaryColor {
-  color: #ff6471;
+  color: #9264ff;
 }
 
 .deepColor {
@@ -186,11 +186,11 @@ header .banner h1 {
 }
 
 header .banner h1::-moz-selection {
-  background-color: #ff6471;
+  background-color: #9264ff;
 }
 
 header .banner h1::selection {
-  background-color: #ff6471;
+  background-color: #9264ff;
 }
 
 header .bannerCTA {
@@ -204,7 +204,7 @@ header .bannerCTA .contactCTA {
   font-size: 16px;
   border: 0;
   cursor: pointer;
-  background-color: #ff6471;
+  background-color: #9264ff;
   color: #fff;
   margin-right: 25px;
 }
@@ -253,7 +253,7 @@ header .banner-img img {
 }
 
 #pricing .priceNav .activeBTN {
-  background-color: #ff6471;
+  background-color: #9264ff;
   color: #fff;
 }
 
@@ -301,7 +301,7 @@ header .banner-img img {
 .priceCard .saving button {
   border-radius: 30px;
   font-size: 12px;
-  background-color: #ff6471;
+  background-color: #9264ff;
   color: #fff;
   cursor: unset;
 }
@@ -327,7 +327,7 @@ header .banner-img img {
 
 .priceCard .duration p {
   font-size: 14px;
-  color: #ff6471;
+  color: #9264ff;
   font-weight: 500;
 }
 
@@ -352,7 +352,7 @@ header .banner-img img {
 
 .priceCard .bookNow {
   width: 100%;
-  background-color: #ff6471;
+  background-color: #9264ff;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -376,7 +376,7 @@ header .banner-img img {
 
 #courses hr {
   width: 312px;
-  border: 2px solid #ff6471;
+  border: 2px solid #9264ff;
   margin: 0 auto;
 }
 
@@ -429,7 +429,7 @@ header .banner-img img {
 
 #courses .heading-text hr {
   width: 650px;
-  border: 2px solid #ff6471;
+  border: 2px solid #9264ff;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -467,7 +467,7 @@ header .banner-img img {
 
 #about .heading-text hr {
   width: 320px;
-  border: 2px solid #ff6471;
+  border: 2px solid #9264ff;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -677,7 +677,7 @@ header .banner-img img {
   width: 100%;
   margin-top: 30px;
   margin-bottom: 25px;
-  background-color: #ff6471;
+  background-color: #9264ff;
   border-radius: 5px;
 }
 
@@ -694,7 +694,7 @@ header .banner-img img {
 
 .footer-right .form-text hr {
   width: 240px;
-  border: 2px solid #ff6471;
+  border: 2px solid #9264ff;
   margin: 0 auto;
 }
 
