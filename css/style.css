@@ -182,7 +182,7 @@ header .banner {
 
 header .banner h1 {
   font-size: 70px;
-  font-family: "Serpentine", sans-serif;
+  font-family: "serpentine", sans-serif;
 }
 
 header .banner h1::-moz-selection {
@@ -314,7 +314,7 @@ header .banner-img img {
 }
 
 .priceCard .rate span {
-  font-family: "Serpentine", sans-serif;
+  font-family: "serpentine", sans-serif;
   font-size: 21px;
 }
 
