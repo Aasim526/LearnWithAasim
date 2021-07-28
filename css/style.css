@@ -5,6 +5,11 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'serpentine', sans-serif;
+  src: url("../fonts/Serpentine-Medium.otf");
+}
+
 html {
   scroll-behavior: smooth;
 }

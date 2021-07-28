@@ -37,4 +37,4 @@ menu.onclick = function(){
 }
 
 // alert 
-alert('This is not the final version. This website is under construction.');
+// alert('This is not the final version. This website is under construction.');
