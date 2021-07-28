@@ -262,6 +262,9 @@ header .banner-img img {
 
 #pricing .priceCardSection {
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #pricing .priceCardSection .priceCard {
@@ -270,6 +273,7 @@ header .banner-img img {
   -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
           box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
   padding: 25px 40px;
+  position: relative;
 }
 
 .priceCard h4 {
@@ -314,6 +318,7 @@ header .banner-img img {
   color: #2e1760;
   font-weight: 500;
   padding: 10px 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .priceCard .rate span {
@@ -362,8 +367,23 @@ header .banner-img img {
   letter-spacing: 1px;
 }
 
-#hardware .rate {
-  font-size: 20px;
+.priceCard .bestValue {
+  width: 100%;
+  background-color: #ff5bce;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.priceCard .bestValue h4 {
+  color: #fff;
+}
+
+.priceCard .bestValueBTN {
+  background-color: #ff5bce;
 }
 
 /* ========== Courses ========== */

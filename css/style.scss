@@ -228,11 +228,13 @@ header {
   }
   .priceCardSection {
     width: 100%;
+    align-items: center;
     .priceCard {
       width: 30%;
       background-color: #fff;
       box-shadow: 0 0 16px rgba($color: #000000, $alpha: 0.16);
       padding: 25px 40px;
+      position: relative;
     }
   }
 }
@@ -272,6 +274,8 @@ header {
     color: $deep-color;
     font-weight: 500;
     padding: 10px 0;
+    font-family: 'Lato', sans-serif;
+    // font-weight: 100;
     span {
       font-family: $secondary-font;
       font-size: 21px;
@@ -312,11 +316,20 @@ header {
     font-weight: 600;
     letter-spacing: 1px;
   }
-}
-
-#hardware {
-  .rate {
-    font-size: 20px;
+  .bestValue{
+    width: 100%;
+    background-color: $pink-color;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    h4{
+      color: #fff;
+    }
+  }
+  .bestValueBTN{
+    background-color: $pink-color;
   }
 }
 
