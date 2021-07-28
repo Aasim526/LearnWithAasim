@@ -7,8 +7,12 @@
 // Font Facing 
 
 @font-face {
-  font-family: 'serpentine', sans-serif;
-  src: url('../fonts/Serpentine-Medium.otf');
+  font-family: 'serpentinemedium';
+  src: url('serpentine-medium-webfont.woff2') format('woff2'),
+       url('serpentine-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 // Variables
@@ -17,7 +21,7 @@ $secondary-color: #492aa7;
 $deep-color: #2e1760;
 $pink-color: #ff5bce;
 $primary-font: "poppins", sans-serif;
-$secondary-font: 'serpentine', sans-serif;
+$secondary-font: 'serpentinemedium';
 
 @mixin button {
   padding: 8px 20px;
