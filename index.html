@@ -496,9 +496,28 @@
                     <label for="subject">Subject</label>
                     <select name="subject" id="subject" required>
                         <option selected disabled>Choose an option</option>
-                        <option value="Basic">Basic</option>
+                        <!-- <option value="Basic">Basic</option>
                         <option value="Web Development">Web Development</option>
-                        <option value="PC Building">PC Building</option>
+                        <option value="PC Building">PC Building</option> -->
+
+                        <optgroup label="Basic Computer">
+                            <option value="Basic Standard">Standard</option>
+                            <option value="Basic Premium">Premium</option>
+                            <option value="Basic Steady">Steady</option>
+                        </optgroup>
+
+                        <optgroup label="Web Development">
+                            <option value="WD Hand Holding">Hand Holding</option>
+                            <option value="WD Premium">Premium</option>
+                            <option value="WD Go Online">Go Online</option>
+                        </optgroup>
+
+                        <optgroup label="PC Building">
+                            <option value="PC Build">PC Build</option>
+                            <option value="Workshop">Workshop</option>
+                            <option value="PC Assembling">PC Assemble</option>
+                        </optgroup>
+
                     </select>
 
                     <button class="white uppercase submitBTN" type="submit">Submit</button>
