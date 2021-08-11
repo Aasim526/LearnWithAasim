@@ -1113,11 +1113,14 @@ header .banner-img img {
 
 /* Max Width 490px */
 @media only screen and (max-width: 490px) {
+  .container {
+    padding: 0 30px;
+  }
   nav {
     padding: 15px 25px;
   }
   header {
-    padding: 50px 25px;
+    padding: 100px 25px;
   }
   header .banner h1 {
     font-size: 30px;
@@ -1142,6 +1145,10 @@ header .banner-img img {
   }
   .footer-right .form-text hr {
     width: 180px;
+  }
+  #contact .footer-right .contact-form {
+    padding: 25px;
+    border-radius: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
