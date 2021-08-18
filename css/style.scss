@@ -4,16 +4,6 @@
   box-sizing: border-box;
 }
 
-// Font Facing 
-
-@font-face {
-  font-family: 'serpentinemedium';
-  src: url('../fonts/Serpentine-Medium.woff2') format('woff2'),
-       url('../fonts/Serpentine-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
 
 // Variables
 $primary-color: #9264ff;
@@ -21,7 +11,7 @@ $secondary-color: #492aa7;
 $deep-color: #2e1760;
 $pink-color: #ff5bce;
 $primary-font: "poppins", sans-serif;
-$secondary-font: 'serpentinemedium';
+$secondary-font: 'Georama', sans-serif;
 
 @mixin button {
   padding: 8px 20px;
@@ -173,7 +163,8 @@ header {
     h1 {
       font-size: 70px;
       font-family: $secondary-font;
-      font-weight: 100;
+      font-weight: 900;
+      letter-spacing: 2px;
       &::selection {
         background-color: $primary-color;
       }
