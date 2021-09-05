@@ -423,6 +423,8 @@ header .banner-img img {
 }
 
 #courses .courseDetailsBox h3 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
   font-size: 30px;
   letter-spacing: 1px;
   margin-bottom: 25px;
@@ -705,8 +707,9 @@ header .banner-img img {
 .footer-right .form-text h4 {
   font-size: 34px;
   letter-spacing: 2px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
   font-size: 28px;
-  font-weight: 400;
 }
 
 .footer-right .form-text hr {

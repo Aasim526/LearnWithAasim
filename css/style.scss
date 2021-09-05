@@ -12,6 +12,7 @@ $deep-color: #2e1760;
 $pink-color: #ff5bce;
 $primary-font: "poppins", sans-serif;
 $secondary-font: 'Georama', sans-serif;
+$third-font: 'Nunito', sans-serif;
 
 @mixin button {
   padding: 8px 20px;
@@ -349,6 +350,8 @@ header {
       width: 50%;
     }
     h3 {
+      font-family: $third-font;
+      font-weight: 900;
       font-size: 30px;
       letter-spacing: 1px;
       margin-bottom: 25px;
@@ -548,8 +551,9 @@ header {
     margin-bottom: 30px;
     h4 {
       @include h2();
+      font-family: $third-font;
+      font-weight: 900;
       font-size: 28px;
-      font-weight: 400;
     }
     hr {
       @include hr(240px);
